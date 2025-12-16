@@ -1,6 +1,22 @@
+
+
 import requests
-def getPoke(Games):
-    response = requests.get(f"https://www.cheapshark.com/api/1.0/deals?storeID=1&upperPrice=15{Games.lower()}")
+def getGames(Games):
+    response = requests.get("https://www.cheapshark.com/api/1.0/deals?storeID=1&upperPrice=15")
+    if response.status_code != 200:
+        print("Error fetching data!")
+        return None
+    
+    data = response.json()
+    return data
+game = getGames("SOMA")
+print(game)
+
+
+'''import requests
+
+def getPoke(poke):
+    response = requests.get(f"https://pokeapi.co/api/v2/pokemon/{poke.lower()}")
     if response.status_code != 200:
         print("Error fetching data!")
         return None
@@ -14,20 +30,4 @@ def getPoke(Games):
     }
 
 pokemon = getPoke("Bulbasaur")
-print(pokemon)
-
-'''import requests
-def getGames(Games):
-    response = requests.get(f"https://www.cheapshark.com/api/1.0/deals?storeID=1&upperPrice=15{Games.lower()}")
-    if response.status_code != 200:
-        print("Error fetching data!")
-        return None
-    
-    data = response.json()
-    return {
-        "title": data["title"],
-        "normalPrice": data["normalPrice"]
-    }
-
-game = getGames("Minecraft")
-print(game)'''
+print(pokemon)'''
