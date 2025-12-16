@@ -2,15 +2,15 @@
 
 import requests
 def getGames(Games):
-    response = requests.get("https://www.cheapshark.com/api/1.0/deals?storeID=1&upperPrice=15")
+    response = requests.get(f"https://www.cheapshark.com/api/1.0/deals?storeID=1&upperPrice=15/{Games}")
     if response.status_code != 200:
         print("Error fetching data!")
         return None
     
     data = response.json()
     return data
-game = getGames("SOMA")
-print(game)
+
+
 
 
 '''import requests
