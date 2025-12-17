@@ -8,8 +8,11 @@ def getGames(Games):
         return None
     
     data = response.json()
-    return data
-game = getGames("nimecraft")
+    for i in data:
+        print(i["external"])
+        print(i["cheapest"])
+
+game = getGames("minecraft")
 print(game)
 
 
