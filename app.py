@@ -15,11 +15,12 @@ while done == False:
             print(i["external"])
             print(i["cheapest"])
 
-    
+    getGames("Minecraft")
 
-    print("Welcome to steam")
+    '''print("Welcome to steam")
     Which = input("What game are you looking for?")
-         
+    if Which in getGames(Which):
+        print("p")'''
     
 
 
