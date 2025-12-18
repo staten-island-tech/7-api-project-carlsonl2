@@ -1,19 +1,24 @@
 
-
+done = False
 import requests
 def getGames(Games):
     response = requests.get(f"https://www.cheapshark.com/api/1.0/games?title={Games.lower()}")
     if response.status_code != 200:
         print("Error fetching data!")
         return None
-    
+        
     data = response.json()
+   
+   
     for i in data:
         print(i["external"])
         print(i["cheapest"])
 
-game = getGames("minecraft")
-print(game)
+    while done == False:
+        print("Welcome to steam")
+        Which = input("What gaem are you looking for?")
+
+
 
 
 
