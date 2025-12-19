@@ -12,11 +12,13 @@ while done == False:
         list = []
    
         for i in data:
-            if i in data:
-                list.append(i["external"])
-                list.append(i["cheapest"])
-        for index, item in enumerate(list):
-            print(list)
+            Details = {
+                "external": i["external"],
+                "price": i["cheapest"]
+            }
+            list.append(Details)
+            for index, i in enumerate(list):
+                print(list)
     
    
     print("Welcome to steam")
