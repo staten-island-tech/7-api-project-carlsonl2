@@ -12,16 +12,18 @@ while done == False:
         list = []
    
         for i in data:
-           
-                print(i["external"])
-                print(i["cheapest"])
+            list.append((i["external"])
+            (i["cheapest"]))
             
     
 
     print("Welcome to steam")
     Which = input("What game are you looking for?")
-    if Which in getGames(Which):
-        print("p")
+    choose = getGames(Which)
+    for e, enumerate in list:
+        print(list) 
+
+        
     
 
 
