@@ -23,6 +23,7 @@ while done == False:
    
     print("Welcome to steam")
     Which = input("What game are you looking for?")
+    getGames(Which)
     
 
         
