@@ -12,8 +12,8 @@ while done == False:
         list = []
    
         for i in data:
-            list.append((i["external"])
-            (i["cheapest"]))
+            list.append(i["external"])
+            list.append(i["cheapest"])
             
     
 
