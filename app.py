@@ -11,17 +11,6 @@ def getGames(Games):
     list = []
    
     
-    Details = {
-        "external": i["external"],
-        "price": i["cheapest"]
-    }
-    list.append(Details)
-    print(list)
-    
-   
-print("Welcome to steam")
-Which = input("What game are you looking for?")
-getGames(Which)
     
 
         
