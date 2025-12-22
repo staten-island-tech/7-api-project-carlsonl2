@@ -1,5 +1,5 @@
 
-
+list = []
 import requests
 def getGames(Games):
     response = requests.get(f"https://www.cheapshark.com/api/1.0/games?title={Games.lower()}")
@@ -8,17 +8,20 @@ def getGames(Games):
         return None
         
     data = response.json()
-    list = []
-   
-    
+
     for i in data:
         list.append(i["external"])
         list.append(i["cheapest"])
-        for index, item in enumerate(list):
-            print(list)
-print("Welcome to steam")
-Which = input("What game are you looking for?")    
-game = getGames(Which)
+    
+    
+    
+which = input("What game do you want")    
+game = getGames(which)
+print(list)
+   
+ 
+
+
 
 
 
