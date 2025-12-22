@@ -9,15 +9,14 @@ def getGames(Games):
         
     data = response.json()
 
-    for i in data:
-        list.append(i["external"])
-        list.append(i["cheapest"])
+    title = [t["type"]["name"] for t in data["external"]]
     
     
     
 which = input("What game do you want")    
 game = getGames(which)
-print(list)
+for index,item in enumerate(list):
+    print(f"{index} : {item[]}")
    
  
 
