@@ -8,14 +8,16 @@ def getGames(Games):
         return None
         
     data = response.json()
-    list = []
-   
+    list = {}
     
-    
-
+    for i in data:
+        list.append(i["external"])
+        list.append(i["cheapest"])
+    print(list)
         
-    
-
+print("Welcome to steam")
+Which = input("What game are you looking for?")    
+getGames(Which)
 
 
 
