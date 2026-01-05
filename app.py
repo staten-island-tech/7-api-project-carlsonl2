@@ -1,6 +1,27 @@
 
-'''import tkinter as tk
-import requests
+
+
+
+
+import tkinter as tk
+window = tk.Tk()
+window.title("Game Price Checker")
+window.geometry("400x200")
+
+prompt = tk.Label(window, text="Type your message below:",
+font=("Ariel", 14))
+
+entry = tk.Entry(window, font=("Arial", 14), width=30)
+entry.pack(pady=10)
+
+result_label = tk.Label(window, text="", font=("Arial", 14, "bold"),
+fg="blue")
+result_label.pack(pady=15)
+
+
+
+window.mainloop()
+'''import requests
 def getGames(Games):
     response = requests.get(f"https://www.cheapshark.com/api/1.0/games?title={Games.lower()}")
     if response.status_code != 200:
@@ -19,35 +40,8 @@ game = input("Enter Game name: ")
 game = getGames(game)
 if game:
     for key, value in game.items():
-        print(f"{key} → {value}")
-
-
-
-
-
-
-
-
-
-window = tk.Tk()
-window.title("Game Price Checker")
-window.geometry("400x200")
-
-prompt = tk.Label(window, text="Type your message below:",
-font=("Ariel", 14))
-
-entry = tk.Entry(window, font=("Arial", 14), width=30)
-entry.pack(pady=10)
-
-result_label = tk.Label(window, text="", font=("Arial", 14, "bold"),
-fg="blue")
-result_label.pack(pady=15)
-
-
-
-window.mainloop()'''
-
-import tkinter as tk # bring in tkinter and call it tk
+        print(f"{key} → {value}")'''
+'''import tkinter as tk # bring in tkinter and call it tk
 # Create the main window (like your app's frame)
 window = tk.Tk()
 window.title("Message Reverser") # title at the top of the window
@@ -80,7 +74,7 @@ command=reverse_message)
 
 reverse_button.pack(pady=10)
 # Keeps the window open and waiting for clicks or typing
-window.mainloop()
+window.mainloop()'''
 '''import requests
 
 def getPoke(poke):
